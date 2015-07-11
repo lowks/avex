@@ -10,8 +10,8 @@ defmodule Avex.Test do
     :ok
   end
   update :test, nil, do: nil
-  # validate :test, format: ~r/^(\d{3,4})?$/
-  # validate :test, included: ["list"]
+  validate :number, format: ~r/^(\d{3,4})?$/
+  validate :number, included: ["123"]
   # validate :test, excluded: ["list"]
 
   validate :test, value when is_binary(value) do
